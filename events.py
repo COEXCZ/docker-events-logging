@@ -16,4 +16,4 @@ with open(log_file_path, 'wb+') as log_file:
 
         event['Actor']['Attributes'] = new_attributes
 
-        log_file.write(json.dumps(event).encode())
+        log_file.write(f"{json.dumps(event)}\n".encode())
