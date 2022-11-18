@@ -15,5 +15,5 @@ with open(log_file_path, 'wb+') as log_file:
             new_attributes[key_snitized] = value
 
         event['Actor']['Attributes'] = new_attributes
-
-        log_file.write(f"{json.dumps(event)}\n".encode())
+        row = "{}\n".format(json.dumps(event))
+        log_file.write(row.encode())
